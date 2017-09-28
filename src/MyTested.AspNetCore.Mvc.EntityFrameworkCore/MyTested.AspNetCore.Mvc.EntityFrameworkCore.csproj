@@ -1,0 +1,42 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <Description>My Tested ASP.NET Core MVC Entity Framework Core components.</Description>
+    <Copyright>2015-2017 Ivaylo Kenov</Copyright>
+    <AssemblyTitle>MyTested.AspNetCore.Mvc.EntityFrameworkCore</AssemblyTitle>
+    <VersionPrefix>1.1.1</VersionPrefix>
+    <Authors>Ivaylo Kenov</Authors>
+    <TargetFrameworks>net451;netstandard1.6</TargetFrameworks>
+    <NoWarn>$(NoWarn);CS1591</NoWarn>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <AssemblyName>MyTested.AspNetCore.Mvc.EntityFrameworkCore</AssemblyName>
+    <AssemblyOriginatorKeyFile>../../tools/Key.snk</AssemblyOriginatorKeyFile>
+    <SignAssembly>true</SignAssembly>
+    <PublicSign Condition=" '$(OS)' != 'Windows_NT' ">true</PublicSign>
+    <PackageId>MyTested.AspNetCore.Mvc.EntityFrameworkCore</PackageId>
+    <PackageTags>aspnetcore;aspnetcoremvc;testing;unit;tests;fluent;testing;framework;asp;net;core;mvc;test;mymvc;mytested</PackageTags>
+    <PackageIconUrl>https://raw.githubusercontent.com/ivaylokenov/MyTested.AspNetCore.Mvc/master/tools/nuget-logo.png</PackageIconUrl>
+    <PackageProjectUrl>https://github.com/ivaylokenov/MyTested.AspNetCore.Mvc</PackageProjectUrl>
+    <PackageLicenseUrl>https://github.com/ivaylokenov/MyTested.AspNetCore.Mvc/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>git://github.com/ivaylokenov/MyTested.AspNetCore.Mvc</RepositoryUrl>
+    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MyTested.AspNetCore.Mvc.Abstractions\MyTested.AspNetCore.Mvc.Abstractions.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="1.1.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="1.1.1" />
+  </ItemGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net451' ">
+    <Reference Include="System" />
+    <Reference Include="Microsoft.CSharp" />
+  </ItemGroup>
+
+</Project>
